@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mini-Routing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div ng-app='routingApp'>
+
+  <div class="menu">
+      <ul>
+          <li><a ui-sref="home">Home</a></li>
+          <li>
+              Products
+              <ul>
+                  <li><a ui-sref="products({id: 'shoes'})">Shoes</a></li>
+
+                  <li><a ui-sref="products({id: 'socks'})">Socks</a></li>
+              </ul>
+          </li>
+          <li><a ui-sref="settings"> Settings </a></li>
+      </ul>
+  </div>
+
+  <div class="view-container">
+      <div ui-view></div>
+  </div>
+
+
+
+
+</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js" charset="utf-8"></script>
+  <script src="./js/app.js" charset="utf-8"></script>
+  <script src="./js/home/homeCtrl.js" charset="utf-8"></script>
+  <script src="./js/products/productsCtrl.js" charset="utf-8"></script>
+  <script src="./js/products/productsService.js" charset="utf-8"></script>
+  <script src="./js/settings/settingsCtrl.js" charset="utf-8"></script>
+</body>
+</html>
